@@ -1,124 +1,579 @@
-.tanmay{
-  text-shadow: 2px 2px 5px Black;
-}
-#loding{
-  position: fixed;
-  width: 100%;
-  height:100vh;
-  background: #fff
-  url(https://media.giphy.com/media/xTkcEQACH24SMPxIQg/giphy.gif)
-  no-repeat center;
-  z-index: 99999;
-}
-body{
+body {
   margin: 0;
-  background-color: powderblue;
+  background-color: #f4f4f4; /* Soft light gray */
 }
-h1{
+
+h1 {
   margin-top: 0;
-  color: #C98474;
+  color: #D85C6D; /* Dusty rose for elegance */
   font-size: 50px;
 }
-.IMG{
-  height: 200px;
-  width: 200px;
-}
-.game_img{
-  text-align: center;
-}
-#title{
- background-color: #powderblue;
-  color: #C98474;
-  text-align: center;
-}
-.container-fluid{
-  padding: 3% 15%
-}
-h2{
-  color: #C98474;
+
+h2 {
+  color: #D85C6D;
   font-size: 20px;
 }
+
+h3 {
+  font-family: "Montserrat-Bold";
+  color: #D85C6D; /* Dusty rose */
+}
+
+#title {
+  background-color: #f4f4f4;
+  color: #D85C6D;
+  text-align: center;
+}
+
+#Education {
+  background-color: #f0f0f0; /* Light gray */
+  text-align: center; /* Center text horizontally */
+  padding: 5% 10%; /* Adjust padding for better space */
+  
+  /* Option 1: Use flexbox to center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-fluid {
+  padding: 3% 15%;
+  display: flex;
+  justify-content: center; /* Ensures that the container is centered */
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.container-fluid {
+  padding: 3% 15%;
+}
+
 hr {
   border-style: none;
   border-top-style: dotted;
-  border-color: grey;
+  border-color: #D0D0D0; /* Soft gray */
   border-width: 5px;
   width: 15%;
+}
 
-}
-h3 {
-  font-family: "Montserrat-Bold";
-  color: #C98474;
-}
-#description {
-  text-align: center;
-}
-#skill {
-  background-color: #D0B8A8;
+#skill, #Education, #cta {
+  background-color: #f0f0f0; /* Light gray */
   padding: 5% 7%;
 }
-.skill-box {
-  text-align: center;
-}
-#Education {
-  background-color: #D0B8A8;
-}
+
 #cta {
   text-align: center;
-  background-color: #D0B8A8;
+  background-color: #f0f0f0;
   padding: 7% 15%;
 }
-#Education {
-  text-align: center;
+
+.form-control {
+  border-color: #F28500; /* Deep orange for input borders */
+  background-color: #ffffff; /* White background */
 }
-#work {
-  text-align: center;
+
+.loader_bg {
+  position: fixed;
+  z-index: 9999999;
+  background: linear-gradient(to bottom, #f0f0f0, #ffffff); /* Gradient background */
+  width: 100%;
+  height: 100%;
 }
-.navbar-toggler {
-  border-color: #fff;
+
+.loader img {
+  width: 280px;
 }
-.heading-cta {
-  text-align: center;
-  font-family: "Montserrat-Black";
-  font-size: 3.5rem;
-  line-height: 1.5;
-}
-.fa-brands{
-  margin: 20px 10px;
-}
-.card-body{
-  text-align: center;
-}
+
 .credits a {
-  color: #C98474;
+  color: #D85C6D;
   transition: 0.3s;
 }
 
 .credits a:hover {
-  color: #fff;
-}
-.form-control {
-  border-color: #C98474;
-  background-color: powderblue;
-}
-.loader_bg {
-     position: fixed;
-     z-index: 9999999;
-     background: #fff;
-     width: 100%;
-     height: 100%;
-}
-.loader {
-     height: 100%;
-     width: 100%;
-     position: absolute;
-     left: 0;
-     top: 0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+  color: #D4AF37; /* Gold on hover */
 }
 
-.loader img {
-     width: 280px;
+/* General styling for the section */
+
+/* Hobbies Section */
+#hobbie {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
 }
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+/* Card Body */
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+.card-title a:hover {
+  color: #0056b3;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* Responsive Design for Columns */
+@media (max-width: 768px) {
+  .col-lg-4 {
+    width: 50%; /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .col-lg-4 {
+    width: 100%; /* Stack into 1 column on small screens */
+  }
+}
+
+/* For the images inside the cards */
+.imgcard {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Make sure content is properly spaced */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Card header h3 font size adjustment */
+.card-header h3 {
+  font-size: 1.5rem;
+}
+
+/* Adjust for small devices */
+@media (max-width: 768px) {
+  
+
+  h1, h3 {
+    font-size: 1.5rem;
+  }
+
+  .card-body {
+    font-size: 0.9rem;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .col-lg-4, .col-md-6 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .imgcard {
+    height: auto;
+    width: 100%;
+  }
+}
+/* Reduce padding and margins */
+.card-body {
+  padding: 10px;
+}
+
+.card-header {
+  margin-bottom: 10px;
+}
+
+/* General section styles */
+#Education {
+  margin: 30px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Container for holding all cards in a row */
+.education-container {
+  display: flex;
+  justify-content: space-between;  /* Distribute cards evenly */
+  gap: 20px;  /* Space between cards */
+  flex-wrap: wrap;  /* Allow cards to wrap on smaller screens */
+}
+
+.education-card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%; /* Adjust card width to fit horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+}
+
+.education-card i {
+  font-size: 2rem;
+  color: #5cb85c;
+  margin-right: 20px;
+}
+
+.education-info {
+  font-size: 1rem;
+}
+
+.education-info strong {
+  color: #333;
+}
+
+.education-info .date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.education-info a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.education-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .education-card {
+    width: 100%;  /* Stack cards vertically on small screens */
+    margin-bottom: 20px;
+  }
+}
+/* General section styles */
+#skill {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Container for skills */
+.skill-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* Always 4 columns */
+  gap: 20px;
+  padding: 0 20px;
+  
+}
+
+/* Skill Box Styling */
+.skill-box {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.skill-box i {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+/* Text Styling */
+.skill-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 500;
+}
+
+.skill-level {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Skill Level: Stars can be replaced by progress bar or percentage if preferred */
+.skill-level::before {
+  content: "";
+  background-color: #ffd700;
+  width: 70%;
+  height: 6px;
+  border-radius: 5px;
+  display: block;
+  margin: 5px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .skill-container {
+    grid-template-columns: repeat(4, 1fr);  /* 4 columns for larger screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .skill-container {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns for medium screens like tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-container {
+    grid-template-columns: repeat(1, 1fr);  /* 1 column for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-box i {
+    font-size: 2rem;  /* Smaller icons on extra small screens */
+  }
+  .skill-box h3 {
+    font-size: 1.2rem;  /* Adjusting the font size for small screens */
+  }
+}
+
+
+/* General section styles */
+#achievements {
+  padding: 50px 0;
+  background-color: #f4f6f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Card styles for achievements */
+.achievement-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon container */
+.icon-container {
+  background-color: #007bff;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.icon-container i {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Card title and description */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+  .icon-container {
+    padding: 10px;
+  }
+  .card-title {
+    font-size: 1.3rem;
+  }
+  .card-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievement-card {
+    padding: 15px;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+/* Footer Styles */
+#footer {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+#footer h5 {
+  font-size: 1.0rem;
+  font-weight: bold;
+}
+
+.social-icons a {
+  color: #ffffff;
+  margin: 0 13px;
+  font-size: 1.0rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffcc00;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.footer-bottom a {
+  color: #ffffff;
+}
+
+.footer-bottom a:hover {
+  color: #ffcc00;
+  transition: color 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 760px) {
+
+  .social-icons {
+    text-align: center;
+  }
+
+  .social-icons a {
+    margin: 10px;
+  }
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+}
+
+.navbar-left .website-name {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-right .nav-button {
+  color: #fff;
+  background-color: #555;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-right .nav-button:hover {
+  background-color: #777;
+}
+
+
